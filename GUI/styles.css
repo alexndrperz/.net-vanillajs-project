@@ -1,1 +1,57 @@
-    
+.display-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    gap:20px;
+}
+
+.login-v {
+    text-align: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cont-control {
+    background-color: #f8f8f8;
+    padding: 44px;
+    border: 1px solid;
+    border-radius: 24px;
+    display: flex;
+    animation: fadeIn;
+    animation-duration: 1s;
+}
+
+
+.register-cont {
+    padding:26px 120px ;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.present-cont {
+    padding:22px 68px ;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.error {
+    display: none;
+}
+
+a {
+    width: 100%;
+    text-align: center;
+}
+
+.present-cont p {
+    margin: 0px;
+}
+.present-cont label {
+    font-weight:bold ;
+}
+.login-v .login-cont button {
+    width: auto;
+}

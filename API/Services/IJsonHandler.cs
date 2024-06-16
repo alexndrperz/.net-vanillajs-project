@@ -5,6 +5,6 @@ namespace API_Practice.Services
     public interface IJsonHandler
     {
         List<Usuario> readUsers();
-        Usuario crearUsuario();
+        bool crearUsuario(Usuario user);
     }
 }
