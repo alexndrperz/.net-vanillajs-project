@@ -1,5 +1,7 @@
+const host = 'https://localhost:7297'
+
 export async function fetchUsuario() {
-        const response = await fetch(`https://localhost:7297/users/info/${sessionStorage.getItem("usr")}`);
+        const response = await fetch(`${host}/users/info/${sessionStorage.getItem("usr")}`);
         const data = await response.json();
         if(response.status == 200) {
             return data;
@@ -19,7 +21,7 @@ export async function crearUsuario(dataUser) {
         },
         body: body}
     
-    const response = await fetch('https://localhost:7297/users/registrar',opt)
+    const response = await fetch(`${host}/localhost:7297/users/registrar`,opt)
     const data = await response.json();
     return data;
 }
@@ -35,7 +37,7 @@ export async function autenticarUsuario(dataUser) {
         },
         body: body}
     
-    const response = await fetch('https://localhost:7297/users/autenticar',opt)
+    const response = await fetch(`${host}/users/autenticar`,opt)
     if(response.status == 200) {
         const data =await response.json();
         sessionStorage.setItem("usr", data.user_id)
