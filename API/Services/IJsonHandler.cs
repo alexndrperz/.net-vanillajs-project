@@ -6,5 +6,8 @@ namespace API_Practice.Services
     {
         List<Usuario> readUsers();
         bool crearUsuario(Usuario user);
+
+        string readJson();
+        bool writeObject(object obj);
     }
 }

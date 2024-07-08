@@ -1,5 +1,7 @@
 ﻿using API_Practice.Models;
 using Newtonsoft.Json;
+using System.Runtime.InteropServices.ObjectiveC;
+using System.Security.Cryptography.X509Certificates;
 
 namespace API_Practice.Services
 {
@@ -50,6 +52,29 @@ namespace API_Practice.Services
             var jsonData = File.ReadAllText(path);
             return JsonConvert.DeserializeObject<List<Usuario>>(jsonData)
                              ?? new List<Usuario>();
+        }
+
+        public string readJson()
+        {
+            string path = fullPathDB();
+            var jsonData = File.ReadAllText(path);
+            return jsonData;
+        }
+
+        public bool writeObject(object obj)
+        {
+            try
+            {
+                string path = fullPathDB();
+                string json = JsonConvert.SerializeObject(obj);
+                File.WriteAllText(path, json);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
         }
     }
 }

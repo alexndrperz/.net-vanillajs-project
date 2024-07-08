@@ -8,8 +8,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddScoped<IJsonHandler, JsonHandler>();
+builder.Services.AddScoped<IUsersService, UsersService>();
+builder.Services.AddScoped<IContactsService, ContactsService>();
 
 var app = builder.Build();
 

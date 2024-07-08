@@ -16,6 +16,8 @@ namespace API_Practice.Models
         [JsonIgnore]
         public string role { get; set; } = "cliente";
         public string descripcion { get; set; } = "";
+
+        public List<Contactos> contactos { get; set; } = [];
     }
 
 

@@ -55,3 +55,30 @@ a {
 .login-v .login-cont button {
     width: auto;
 }
+
+.data-cont {
+    display: block;
+    padding: 30px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.form {
+    margin-top: 50px;
+    max-width: 500px;
+
+}
+
+.modal   .form-control {
+    margin: 20px 0px;
+}
+
+.table .btn {
+margin: 0px 10px ;
+}
+
