@@ -1,9 +1,10 @@
 ﻿using API_Practice.DTOs;
 using API_Practice.Models;
+using API_Practice.Services.Contracts;
 using AutoMapper;
 using Newtonsoft.Json;
 
-namespace API_Practice.Services
+namespace API_Practice.Services.Mockups
 {
     public class ContactsService : IContactsService
     {
@@ -18,7 +19,7 @@ namespace API_Practice.Services
         }
         public object? createContact(ContactsCreateDTO contact)
         {
-            List<Contactos>? contactos =   getContactsByUser(contact.user_id);
+            List<Contactos>? contactos = getContactsByUser(contact.user_id);
             if (contactos == null) return null;
             Contactos ent = _mapper.Map<Contactos>(contact);
             ent.Id = generateId(contactos);
@@ -58,8 +59,8 @@ namespace API_Practice.Services
         {
             string json = _jsonRepo.readJson();
             List<Usuario> usuarios = JsonConvert.DeserializeObject<List<Usuario>>(json) ?? new List<Usuario>();
-            Usuario? user = usuarios.FirstOrDefault(us => us.Id == user_id); 
-            if(user == null)
+            Usuario? user = usuarios.FirstOrDefault(us => us.Id == user_id);
+            if (user == null)
             {
                 return null;
             }
@@ -73,7 +74,7 @@ namespace API_Practice.Services
             Contactos? contactEnt = contactos.FirstOrDefault(co => co.Id == contact_id);
             if (contactEnt == null) return null;
             _mapper.Map(contact, contactEnt);
-            int index=contactos.IndexOf(contactEnt);
+            int index = contactos.IndexOf(contactEnt);
             contactos[index] = contactEnt;
             object? msg = UserAndContactConnection(contact.user_id, contactos);
             return msg;
@@ -87,6 +88,6 @@ namespace API_Practice.Services
             user.contactos = contactos;
             _usersServ.actualizarUsuario(user);
             return new { msg = "Exito" };
-        } 
+        }
     }
 }

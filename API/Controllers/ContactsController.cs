@@ -1,6 +1,6 @@
 ﻿using API_Practice.DTOs;
 using API_Practice.Models;
-using API_Practice.Services;
+using API_Practice.Services.Contracts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API_Practice.Controllers
@@ -19,10 +19,7 @@ namespace API_Practice.Controllers
         public IActionResult GetContactsByUser(int user_id)
         {
             List<Contactos>? contactos = _contactServ.getContactsByUser(user_id);
-            if (contactos == null)
-            {
-                return NotFound(new { msg = "Usuario no encontrado" });
-            }
+            if (contactos == null) return NotFound(new { msg = "Usuario no encontrado" }); 
             return Ok(contactos);
         }
 

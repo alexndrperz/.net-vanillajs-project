@@ -1,11 +1,10 @@
 ﻿using API_Practice.Models;
 
-namespace API_Practice.Services
+namespace API_Practice.Services.Contracts
 {
     public interface IJsonHandler
     {
-        List<Usuario> readUsers();
-        bool crearUsuario(Usuario user);
+
 
         string readJson();
         bool writeObject(object obj);
