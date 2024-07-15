@@ -1,8 +1,8 @@
-﻿using API_Practice.DTOs;
-using API_Practice.Models;
-using API_Practice.Services.Contracts;
+﻿using Datos.DTOs;
+using Datos.Entities;
+using Negocio.Services.Contracts;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
+
 
 namespace API_Practice.Controllers
 {
@@ -25,7 +25,7 @@ namespace API_Practice.Controllers
         }
 
         [HttpPost("autenticar")]
-        public ActionResult autenticarUsuario([FromBody] UsuarioAuth userCred)
+        public ActionResult autenticarUsuario([FromBody] UsuarioAuthDTO userCred)
         {
             MsgServerMD result = _usersService.autenticarUsuario(userCred);
             if (result.success) return Ok(result.data);
@@ -37,7 +37,7 @@ namespace API_Practice.Controllers
         {
             Usuario? usuario = _usersService.getUsuario(user_id);   
             if (usuario == null) return Unauthorized(new { msg = "No deberias estar aqui" });
-            usuario.password = "#####";
+            usuario.Password = "#####";
             return Ok(usuario);
         }
     }

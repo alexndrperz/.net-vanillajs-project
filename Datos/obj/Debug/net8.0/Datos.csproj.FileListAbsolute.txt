@@ -1,0 +1,15 @@
+C:\Users\Alan\Desktop\.net-vanillajs-project\Datos\bin\Debug\net8.0\Datos.deps.json
+C:\Users\Alan\Desktop\.net-vanillajs-project\Datos\bin\Debug\net8.0\Datos.dll
+C:\Users\Alan\Desktop\.net-vanillajs-project\Datos\bin\Debug\net8.0\Datos.pdb
+C:\Users\Alan\Desktop\.net-vanillajs-project\Datos\obj\Debug\net8.0\Datos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alan\Desktop\.net-vanillajs-project\Datos\obj\Debug\net8.0\Datos.AssemblyInfoInputs.cache
+C:\Users\Alan\Desktop\.net-vanillajs-project\Datos\obj\Debug\net8.0\Datos.AssemblyInfo.cs
+C:\Users\Alan\Desktop\.net-vanillajs-project\Datos\obj\Debug\net8.0\Datos.csproj.CoreCompileInputs.cache
+C:\Users\Alan\Desktop\.net-vanillajs-project\Datos\obj\Debug\net8.0\Datos.sourcelink.json
+C:\Users\Alan\Desktop\.net-vanillajs-project\Datos\obj\Debug\net8.0\Datos.dll
+C:\Users\Alan\Desktop\.net-vanillajs-project\Datos\obj\Debug\net8.0\refint\Datos.dll
+C:\Users\Alan\Desktop\.net-vanillajs-project\Datos\obj\Debug\net8.0\Datos.pdb
+C:\Users\Alan\Desktop\.net-vanillajs-project\Datos\obj\Debug\net8.0\ref\Datos.dll
+C:\Users\Alan\Desktop\.net-vanillajs-project\Datos\bin\Debug\net8.0\Datos.runtimeconfig.json
+C:\Users\Alan\Desktop\.net-vanillajs-project\Datos\obj\Debug\net8.0\Datos.csproj.AssemblyReference.cache
+C:\Users\Alan\Desktop\.net-vanillajs-project\Datos\obj\Debug\net8.0\Datos.genruntimeconfig.cache
