@@ -40,6 +40,7 @@ export async function autenticarUsuario(dataUser) {
     const response = await fetch(`${host}/users/autenticar`,opt)
     if(response.status == 200) {
         const data =await response.json();
+        console.log(data);
         sessionStorage.setItem("usr", data.user_id)
         return {success:true}
     }
